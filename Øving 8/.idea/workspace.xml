@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="48c2b084-43b3-4e58-a11d-25991565f8e2" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-    </list>
+    <list default="true" id="48c2b084-43b3-4e58-a11d-25991565f8e2" name="Default" comment="" />
     <ignored path="Øving 8.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -33,11 +32,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Forgj.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Forgj.java">
+      <file leaf-file-name="Heap.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Heap.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="51">
               <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Forgj.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Forgj.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -552,12 +561,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1476118340067</updated>
-      <workItem from="1476118341258" duration="37000" />
+      <workItem from="1476118341258" duration="334000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37000" />
+    <option name="totallyTimeSpent" value="334000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1932" height="1056" extended-state="0" />
@@ -606,6 +615,14 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/Forgj.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Dijkstragraf.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -614,7 +631,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Forgj.java">
+    <entry file="file://$PROJECT_DIR$/src/Heap.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
