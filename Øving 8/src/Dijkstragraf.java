@@ -13,6 +13,9 @@ public class Dijkstragraf {
     private Node[] node;
     private Heap heap;
 
+    public Dijkstragraf(String filPlassering) {
+        lagGrafFraFil(filPlassering);
+    }
 
     private void lagGrafFraFil(String filPlassering) {
         try {
@@ -23,6 +26,7 @@ public class Dijkstragraf {
 
             for (int i = 0; i < N; i++) {
                 node[i] = new Node();
+                node[i].tall = i;
             }
 
             K = Integer.parseInt(stringTokenizer.nextToken());
@@ -32,11 +36,26 @@ public class Dijkstragraf {
                 int fra = Integer.parseInt(stringTokenizer.nextToken());
                 int til = Integer.parseInt(stringTokenizer.nextToken());
                 int vekt = Integer.parseInt(stringTokenizer.nextToken());
-                Kant k //VKANT??
-                node[fra].kant1 = k;
+                VKant vKant = new VKant(node[til], (VKant)node[fra].kant1, vekt);
+                node[fra].kant1 = vKant;
             }
         } catch (IOException ioe) {
             System.out.println(ioe.getMessage());
+        }
+    }
+
+    public void skrivut() {
+        System.out.println("TEST:");
+        System.out.println("Node | Forgjenger | Distanse");
+
+        /*for(Node n : node) {
+            //System.out.println(n.d + "..." + n.kant1.neste);
+            //System.out.print("" + n.tall);
+        }*/
+
+        for (int i = 0; i < N; i++) {
+            //System.out.println(node[i].tall + "    " + node[i].kant1.til.tall);
+            System.out.println(node[i].tall);
         }
     }
 
@@ -46,7 +65,6 @@ public class Dijkstragraf {
         }
         ((Forgj)s.d).dist = 0;
     }
-
 
     private int hent_min() {
         int min = node[0];
