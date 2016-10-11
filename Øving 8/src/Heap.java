@@ -46,6 +46,6 @@ public class Heap {
     }
 
     private int hent_min() {
-
+        return -1;
     }
 }

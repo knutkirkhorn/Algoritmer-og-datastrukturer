@@ -1,7 +1,7 @@
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.StringTokenizer;
+import java.util.*;
 
 /**
  * Created by Knut on 10.10.2016.
@@ -11,10 +11,22 @@ public class Dijkstragraf {
     private int N; //antall noder
     private int K; //antall kanter
     private Node[] node;
-    private Heap heap;
+
+    PriorityQueue<Node> priorityQueue; // = new PriorityQueue<>();
+
 
     public Dijkstragraf(String filPlassering) {
-        lagGrafFraFil(filPlassering);
+        lagGrafFraFil(filPlassering); //Hente graf fra fil på pcen
+
+        priorityQueue = new PriorityQueue<>(N, new Comparator<Node>() {
+            @Override
+            public int compare(Node node1, Node node2) {
+                return (node1.d.distanse - node2.d.distanse);
+            }
+        });
+        /*for (int i = 0; i < N; i++) { //Løkke som henter alle nodene fra node tabellen og legger dem i prioritetskøen
+            priorityQueue.add(node[i]);
+        }*/
     }
 
     private void lagGrafFraFil(String filPlassering) {
@@ -26,7 +38,7 @@ public class Dijkstragraf {
 
             for (int i = 0; i < N; i++) {
                 node[i] = new Node();
-                node[i].tall = i;
+                node[i].nodeNummer = i;
             }
 
             K = Integer.parseInt(stringTokenizer.nextToken());
@@ -44,59 +56,60 @@ public class Dijkstragraf {
         }
     }
 
-    public void skrivut() {
-        System.out.println("TEST:");
-        System.out.println("Node | Forgjenger | Distanse");
+    public void skrivUtGraf(int start) {
 
-        /*for(Node n : node) {
-            //System.out.println(n.d + "..." + n.kant1.neste);
-            //System.out.print("" + n.tall);
-        }*/
-
+        System.out.println("Node  |  Forgjenger  |  Distanse");
         for (int i = 0; i < N; i++) {
-            //System.out.println(node[i].tall + "    " + node[i].kant1.til.tall);
-            System.out.println(node[i].tall);
+            if (i != start) {
+
+                String distanse = "                       nåes ikke";
+
+                if (node[i].d.finnDistanse() != Forgjenger.uendelig) {
+                    distanse = "             " + node[i].d.finnDistanse();
+                }
+
+                if (node[i].d.finnForgjenger() != null) {
+                    System.out.println(node[i].nodeNummer + "            " + node[i].d.finnForgjenger().nodeNummer + distanse);
+                } else {
+                    System.out.println(node[i].nodeNummer + distanse);
+                }
+
+            } else {
+                System.out.println(start + "          start           0");
+            }
         }
     }
 
-    private void initforgj(Node s) {
+    private void initForgjenger(Node s) {
         for (int i = N; i-- > 0;) {
-            node[i].d = new Forgj();
+            node[i].d = new Forgjenger();
         }
-        ((Forgj)s.d).dist = 0;
-    }
-
-    private Node hent_min(int i, Node[] pri) {
-        /*int min = node[0];
-        node[0] = node[--len];
-        fiks_heap(0);
-        return min;*/
+        s.d.distanse = 0;
     }
 
     private void forkort(Node n, VKant kant) {
-        Forgj nd = (Forgj)n.d;
-        Forgj md = (Forgj)kant.til.d;
+        Forgjenger nd = n.d;
+        Forgjenger md = kant.til.d;
 
-        if (md.dist > nd.dist + kant.avstand) {
-            md.dist = nd.dist + kant.avstand;
-            md.forgj = n;
+        if (md.distanse > nd.distanse + kant.avstandMellom) {
+            md.distanse = nd.distanse + kant.avstandMellom;
+            md.forgjenger = n;
         }
     }
 
-    private void lag_priko(Node[] pri) {
+    public void dijkstra(int startNummer) {
+        Node noden = node[startNummer];
+        initForgjenger(noden);
 
-    }
+        priorityQueue.addAll(new ArrayList<Node>(Arrays.asList(node)));
 
-    private void dijkstra(int nummer) {
-        Node noden = node[nummer];
-        initforgj(noden);
-        Node[] pri = new Node[N];
-        lag_priko(pri);
         for (int i = N; i > 1; --i) {
-            Node n = hent_min(i, pri);
-            for (VKant k = (VKant)n.kant1; k != null; k = (VKant)k.neste) {
+
+            Node n = priorityQueue.poll();
+            for (VKant k = n.kant1; k != null; k = (VKant)k.neste) {
                 forkort(n, k);
             }
         }
+        skrivUtGraf(startNummer);
     }
 }

@@ -6,8 +6,8 @@
 public class Main {
     public static void main(String[] args) {
         String filPlassering = "C:\\Users\\Knut\\Documents\\GitHub\\Algoritmer_og_datastrukturer\\Øving 8\\resources\\graf.txt";
-        Dijkstragraf dijkstragraf = new Dijkstragraf(filPlassering);
-        dijkstragraf.skrivut();
 
+        Dijkstragraf dijkstragraf = new Dijkstragraf(filPlassering);
+        dijkstragraf.dijkstra(1);
     }
 }

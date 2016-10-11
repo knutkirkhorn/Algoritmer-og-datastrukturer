@@ -3,10 +3,10 @@
  */
 public class VKant extends Kant {
 
-    int avstand; //vekten mellom kantene, men i dette tilfellet avstanden
+    int avstandMellom; //vekten mellom kantene, men i dette tilfellet avstanden mellom to noder
 
-    public VKant(Node n, VKant neste, int avstand) {
+    public VKant(Node n, VKant neste, int avstandMellom) {
         super(n, neste);
-        this.avstand = avstand;
+        this.avstandMellom = avstandMellom;
     }
 }
