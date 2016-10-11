@@ -66,16 +66,30 @@ public class Dijkstragraf {
         ((Forgj)s.d).dist = 0;
     }
 
-    private int hent_min() {
-        int min = node[0];
+    private Node hent_min(int i, Node[] pri) {
+        /*int min = node[0];
         node[0] = node[--len];
         fiks_heap(0);
-        return min;
+        return min;*/
     }
 
+    private void forkort(Node n, VKant kant) {
+        Forgj nd = (Forgj)n.d;
+        Forgj md = (Forgj)kant.til.d;
 
-    private void dijkstra(Node s) {
-        initforgj(s);
+        if (md.dist > nd.dist + kant.avstand) {
+            md.dist = nd.dist + kant.avstand;
+            md.forgj = n;
+        }
+    }
+
+    private void lag_priko(Node[] pri) {
+
+    }
+
+    private void dijkstra(int nummer) {
+        Node noden = node[nummer];
+        initforgj(noden);
         Node[] pri = new Node[N];
         lag_priko(pri);
         for (int i = N; i > 1; --i) {

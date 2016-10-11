@@ -44,4 +44,8 @@ public class Heap {
             fiksHeap(i);
         }
     }
+
+    private int hent_min() {
+
+    }
 }
