@@ -81,8 +81,8 @@
         <option value="$PROJECT_DIR$/src/Forgjenger.java" />
         <option value="$PROJECT_DIR$/src/Node.java" />
         <option value="$PROJECT_DIR$/resources/graf2.txt" />
-        <option value="$PROJECT_DIR$/src/Dijkstragraf.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$PROJECT_DIR$/src/Dijkstragraf.java" />
       </list>
     </option>
   </component>
@@ -179,6 +179,7 @@
   <component name="PropertiesComponent">
     <property name="aspect.path.notification.shown" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Øving 9" />
   </component>
   <component name="RunManager" selected="Application.Main">
     <configuration default="false" name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -622,15 +623,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1476188207428</updated>
-      <workItem from="1476188210204" duration="20771000" />
+      <workItem from="1476188210204" duration="20789000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20771000" />
+    <option name="totallyTimeSpent" value="20789000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />

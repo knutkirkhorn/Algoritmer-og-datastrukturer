@@ -11,7 +11,7 @@ public class Main {
         char[][] rel2 = {{'a','x'},{'r','2'},{'0','0'},{'m','2'}};
 
         if (relProp.checkForMultipleValues(rel1) && relProp.checkForMultipleValues(rel2) && relProp.checkForMultipleValues(setA)) {
-            System.out.println();
+            System.out.println("Settet og relasjonene inneholder ingen duplikater. \n");
         }
 
         System.out.println("Rel1 is reflexive: " + relProp.isReflexive(rel1, setA));
