@@ -98,3 +98,4 @@ workspace.xml
 modules.xml
 .idea/misc.xml 
 *.ipr
+*.class
