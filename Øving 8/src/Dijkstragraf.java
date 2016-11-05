@@ -94,6 +94,8 @@ public class Dijkstragraf {
         if (md.distanse > nd.distanse + kant.avstandMellom) {
             md.distanse = nd.distanse + kant.avstandMellom;
             md.forgjenger = n;
+            priorityQueue.remove(kant.til);
+            priorityQueue.add(kant.til);
         }
     }
 
