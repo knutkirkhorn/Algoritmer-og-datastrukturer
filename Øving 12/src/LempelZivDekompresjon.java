@@ -89,6 +89,7 @@ public class LempelZivDekompresjon {
         }
     }
 
+
     public static void main(String[] args) {
         LempelZivDekompresjon lempelZivNyDekompresjon = new LempelZivDekompresjon("TestFilKomprimert.ingknu", "TestFilDekomprimert.txt");
         lempelZivNyDekompresjon.dekomprimerFil();
