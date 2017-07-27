@@ -15,3 +15,6 @@ Her vil det ligge kode fra faget algoritmer og datastrukturer på NTNU høsten 2
 - [Øving 11: Språk og automater](Øving%2011)
 - [Øving 12: Datakompressjon og tekstsøk](Øving%2012)
 - [Øving 13: Korteste vei, A*](Øving%2013)
+
+## Se andre emner
+Se [liste-over-emener](https://github.com/Knutakir/liste-over-emner) for en liste over alle emner jeg har hatt på NTNU.
