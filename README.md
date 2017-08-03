@@ -1,5 +1,5 @@
 # Algoritmer og datastrukturer
-Her vil det ligge kode fra faget algoritmer og datastrukturer på NTNU høsten 2016.
+Øvinger fra TDAT2005 Algoritmer og datastrukturer, høsten 2016, 2. klasse dataingeniør på NTNU.
 
 ## Øvinger
 - [Øving 1: Kompleksitet](Øving%2001)
